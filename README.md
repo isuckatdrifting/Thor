@@ -14,7 +14,7 @@ FPGA stores the cached data in FIFO.
 
 FPGA sends the data in FIFO to PC(Matlab GUI) via UART.
 
-##Matlab GUI
+## Matlab GUI
 Using UART to receive data from FPGA.
 
 Parse the 12bit 2-axis data.
@@ -23,7 +23,7 @@ Plot the scatter point.
 
 Crop a specific area and calculate the magnification.
 
-##Other Info
+## Other Info
 Analog device required in this system.
 
 Results are attached in master directory.
