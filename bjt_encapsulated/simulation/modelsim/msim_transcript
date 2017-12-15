@@ -1,0 +1,176 @@
+# Reading D:/Applications/Altera/13.1/modelsim_ae/tcl/vsim/pref.tcl 
+# do bjt_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying D:\Applications\Altera\13.1\modelsim_ae\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\Applications\Altera\13.1\modelsim_ae\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+D:/Files/S3E1/exp/bjt_encapsulated {D:/Files/S3E1/exp/bjt_encapsulated/FIFO1.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module FIFO1
+# 
+# Top level modules:
+# 	FIFO1
+# vlog -vlog01compat -work work +incdir+D:/Files/S3E1/exp/bjt_encapsulated {D:/Files/S3E1/exp/bjt_encapsulated/uart_control.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module uart_control
+# 
+# Top level modules:
+# 	uart_control
+# vlog -vlog01compat -work work +incdir+D:/Files/S3E1/exp/bjt_encapsulated {D:/Files/S3E1/exp/bjt_encapsulated/FIFO_control.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module FIFO_control
+# ** Warning: D:/Files/S3E1/exp/bjt_encapsulated/FIFO_control.v(39): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	FIFO_control
+# vlog -vlog01compat -work work +incdir+D:/Files/S3E1/exp/bjt_encapsulated {D:/Files/S3E1/exp/bjt_encapsulated/DAC_control.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module DAC_control
+# ** Warning: D:/Files/S3E1/exp/bjt_encapsulated/DAC_control.v(30): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: D:/Files/S3E1/exp/bjt_encapsulated/DAC_control.v(31): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	DAC_control
+# vlog -vlog01compat -work work +incdir+D:/Files/S3E1/exp/bjt_encapsulated {D:/Files/S3E1/exp/bjt_encapsulated/ADC_control.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ADC_control
+# 
+# Top level modules:
+# 	ADC_control
+# vlog -vlog01compat -work work +incdir+D:/Files/S3E1/exp/bjt_encapsulated {D:/Files/S3E1/exp/bjt_encapsulated/uarttx.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module uarttx
+# 
+# Top level modules:
+# 	uarttx
+# vlog -vlog01compat -work work +incdir+D:/Files/S3E1/exp/bjt_encapsulated {D:/Files/S3E1/exp/bjt_encapsulated/clockpll.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module clockpll
+# 
+# Top level modules:
+# 	clockpll
+# vlog -vlog01compat -work work +incdir+D:/Files/S3E1/exp/bjt_encapsulated {D:/Files/S3E1/exp/bjt_encapsulated/bjt_test.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module bjt
+# 
+# Top level modules:
+# 	bjt
+# vlog -vlog01compat -work work +incdir+D:/Files/S3E1/exp/bjt_encapsulated {D:/Files/S3E1/exp/bjt_encapsulated/adc_ltc2308.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module adc_ltc2308
+# 
+# Top level modules:
+# 	adc_ltc2308
+# 
+# vlog -vlog01compat -work work +incdir+D:/Files/S3E1/exp/bjt_encapsulated {D:/Files/S3E1/exp/bjt_encapsulated/testbench.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  testbench
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps testbench 
+# //  ModelSim ALTERA 10.1d Nov  2 2012 
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading work.testbench
+# Loading work.bjt
+# Loading work.clockpll
+# Loading work.DAC_control
+# Loading work.ADC_control
+# Loading work.adc_ltc2308
+# Loading work.FIFO_control
+# Loading work.FIFO1
+# Loading altera_mf_ver.scfifo
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading work.uart_control
+# Loading work.uarttx
+# 
+# do D:/Files/S3E1/exp/bjt_encapsulated/simulation/modelsim/wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# 
+#TX AD5664 Module
+# add wave -noupdate /testbench/globalclock_tb
+# add wave -noupdate /testbench/rst_tb
+# add wave -noupdate /testbench/tx_spi_sclk_tb
+# add wave -noupdate /testbench/tx_spi_sync_tb
+# add wave -noupdate /testbench/tx_spi_din_tb
+# add wave -noupdate -radix unsigned /testbench/testbench/DAC_control_inst/serial_counter
+# add wave -noupdate -radix unsigned /testbench/testbench/DAC_control_inst/verti_counter
+# add wave -noupdate -radix unsigned /testbench/testbench/DAC_control_inst/hori_counter
+# add wave -noupdate /testbench/testbench/DAC_control_inst/stepwave
+# add wave -noupdate /testbench/testbench/DAC_control_inst/sawtooth
+# 
+#ADC Module
+# add wave -noupdate /testbench/ADC_CONVST_tb
+# add wave -noupdate /testbench/ADC_SCK_tb
+# add wave -noupdate /testbench/ADC_SDI_tb
+# add wave -noupdate /testbench/ADC_SDO_tb
+# add wave -noupdate -radix unsigned /testbench/testbench/ADC_control_inst/measure_count
+# add wave -noupdate /testbench/testbench/ADC_control_inst/measure_done
+# 
+# add wave -noupdate /testbench/testbench/ADC_control_inst/temp
+# add wave -noupdate /testbench/testbench/ADC_control_inst/measure_dataread
+# 
+#FIFO Module
+# add wave -noupdate /testbench/testbench/FIFO_control_inst/FIFO1_inst/wrreq
+# add wave -noupdate -radix unsigned /testbench/testbench/FIFO_control_inst/FIFO1_inst/usedw
+# add wave -noupdate /testbench/testbench/FIFO_control_inst/FIFO1_inst/clock
+# 
+# 
+# add wave -noupdate /testbench/testbench/FIFO_control_inst/fifo_data
+# add wave -noupdate /testbench/testbench/FIFO_control_inst/FIFO1_inst/data
+# add wave -noupdate /testbench/testbench/FIFO_control_inst/FIFO1_inst/rdreq
+# add wave -noupdate /testbench/testbench/FIFO_control_inst/q_sig
+# ** Error: (vish-4014) No objects found matching '/testbench/testbench/FIFO_control_inst/q_sig'.
+# Executing ONERROR command at macro D:\Files\S3E1\exp\bjt_encapsulated\simulation\modelsim\wave.do line 36
+# add wave -noupdate /testbench/testbench/FIFO_control_inst/q_sig_wire
+# add wave -noupdate /testbench/testbench/FIFO_control_inst/fifo_rdreq
+# 
+# 
+#UART Module
+# add wave -noupdate /testbench/testbench/uart_control_inst/UART_CLK
+# add wave -noupdate /testbench/uart_tx_tb
+# add wave -noupdate /testbench/testbench/uart_control_inst/uarttx_inst/idle
+# add wave -noupdate /testbench/testbench/uart_control_inst/uart_counter
+# add wave -noupdate /testbench/testbench/uart_control_inst/datatosend
+# add wave -noupdate /testbench/testbench/uart_control_inst/uart_tx_counter
+# add wave -noupdate /testbench/testbench/uart_control_inst/q_sig
+# run 4ms
+# 
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ns
+# 
+# update
+# WaveRestoreZoom {0 ps} {65536 ns}
+# 
+# 
+# 

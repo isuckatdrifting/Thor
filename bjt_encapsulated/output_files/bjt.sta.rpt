@@ -1,0 +1,1227 @@
+TimeQuest Timing Analyzer report for bjt
+Fri Dec 01 20:20:04 2017
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1100mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1100mV 85C Model Setup Summary
+  8. Slow 1100mV 85C Model Hold Summary
+  9. Slow 1100mV 85C Model Recovery Summary
+ 10. Slow 1100mV 85C Model Removal Summary
+ 11. Slow 1100mV 85C Model Minimum Pulse Width Summary
+ 12. Setup Times
+ 13. Hold Times
+ 14. Clock to Output Times
+ 15. Minimum Clock to Output Times
+ 16. Slow 1100mV 85C Model Metastability Report
+ 17. Slow 1100mV 0C Model Fmax Summary
+ 18. Slow 1100mV 0C Model Setup Summary
+ 19. Slow 1100mV 0C Model Hold Summary
+ 20. Slow 1100mV 0C Model Recovery Summary
+ 21. Slow 1100mV 0C Model Removal Summary
+ 22. Slow 1100mV 0C Model Minimum Pulse Width Summary
+ 23. Setup Times
+ 24. Hold Times
+ 25. Clock to Output Times
+ 26. Minimum Clock to Output Times
+ 27. Slow 1100mV 0C Model Metastability Report
+ 28. Fast 1100mV 85C Model Setup Summary
+ 29. Fast 1100mV 85C Model Hold Summary
+ 30. Fast 1100mV 85C Model Recovery Summary
+ 31. Fast 1100mV 85C Model Removal Summary
+ 32. Fast 1100mV 85C Model Minimum Pulse Width Summary
+ 33. Setup Times
+ 34. Hold Times
+ 35. Clock to Output Times
+ 36. Minimum Clock to Output Times
+ 37. Fast 1100mV 85C Model Metastability Report
+ 38. Fast 1100mV 0C Model Setup Summary
+ 39. Fast 1100mV 0C Model Hold Summary
+ 40. Fast 1100mV 0C Model Recovery Summary
+ 41. Fast 1100mV 0C Model Removal Summary
+ 42. Fast 1100mV 0C Model Minimum Pulse Width Summary
+ 43. Setup Times
+ 44. Hold Times
+ 45. Clock to Output Times
+ 46. Minimum Clock to Output Times
+ 47. Fast 1100mV 0C Model Metastability Report
+ 48. Multicorner Timing Analysis Summary
+ 49. Setup Times
+ 50. Hold Times
+ 51. Clock to Output Times
+ 52. Minimum Clock to Output Times
+ 53. Board Trace Model Assignments
+ 54. Input Transition Times
+ 55. Signal Integrity Metrics (Slow 1100mv 0c Model)
+ 56. Signal Integrity Metrics (Slow 1100mv 85c Model)
+ 57. Signal Integrity Metrics (Fast 1100mv 0c Model)
+ 58. Signal Integrity Metrics (Fast 1100mv 85c Model)
+ 59. Setup Transfers
+ 60. Hold Transfers
+ 61. Recovery Transfers
+ 62. Removal Transfers
+ 63. Report TCCS
+ 64. Report RSKM
+ 65. Unconstrained Paths
+ 66. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                        ;
++--------------------+-----------------------------------------------------+
+; Quartus II Version ; Version 13.1.0 Build 162 10/23/2013 SJ Full Version ;
+; Revision Name      ; bjt                                                 ;
+; Device Family      ; Cyclone V                                           ;
+; Device Name        ; 5CGXFC5C6F27C7                                      ;
+; Timing Models      ; Final                                               ;
+; Delay Model        ; Combined                                            ;
+; Rise/Fall Delays   ; Enabled                                             ;
++--------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.25        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;  25.0%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                                                                                                   ;
++-----------------------------------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------------------------------------------------------+
+; Clock Name                                                                  ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                                                         ;
++-----------------------------------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------------------------------------------------------+
+; ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start } ;
+; clockpll:pll|adc_clk                                                        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clockpll:pll|adc_clk }                                                        ;
+; clockpll:pll|adc_clk_delay                                                  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clockpll:pll|adc_clk_delay }                                                  ;
+; clockpll:pll|dac_clk                                                        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clockpll:pll|dac_clk }                                                        ;
+; clockpll:pll|uart_clk                                                       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clockpll:pll|uart_clk }                                                       ;
+; DAC_control:DAC_control_inst|tx_spi_sync                                    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { DAC_control:DAC_control_inst|tx_spi_sync }                                    ;
+; globalclock                                                                 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { globalclock }                                                                 ;
++-----------------------------------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary                                             ;
++------------+-----------------+------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                               ; Note ;
++------------+-----------------+------------------------------------------+------+
+; 52.65 MHz  ; 52.65 MHz       ; clockpll:pll|dac_clk                     ;      ;
+; 143.1 MHz  ; 143.1 MHz       ; clockpll:pll|adc_clk                     ;      ;
+; 173.58 MHz ; 173.58 MHz      ; DAC_control:DAC_control_inst|tx_spi_sync ;      ;
+; 230.68 MHz ; 230.68 MHz      ; clockpll:pll|uart_clk                    ;      ;
+; 274.73 MHz ; 274.73 MHz      ; clockpll:pll|adc_clk_delay               ;      ;
+; 301.11 MHz ; 301.11 MHz      ; globalclock                              ;      ;
++------------+-----------------+------------------------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Setup Summary                                                                   ;
++-----------------------------------------------------------------------------+---------+---------------+
+; Clock                                                                       ; Slack   ; End Point TNS ;
++-----------------------------------------------------------------------------+---------+---------------+
+; DAC_control:DAC_control_inst|tx_spi_sync                                    ; -10.659 ; -922.919      ;
+; clockpll:pll|uart_clk                                                       ; -9.599  ; -163.292      ;
+; clockpll:pll|dac_clk                                                        ; -8.997  ; -1549.520     ;
+; clockpll:pll|adc_clk                                                        ; -7.609  ; -263.926      ;
+; clockpll:pll|adc_clk_delay                                                  ; -2.640  ; -54.522       ;
+; globalclock                                                                 ; -2.321  ; -83.117       ;
+; ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start ; -1.048  ; -1.048        ;
++-----------------------------------------------------------------------------+---------+---------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Hold Summary                                                                   ;
++-----------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                       ; Slack  ; End Point TNS ;
++-----------------------------------------------------------------------------+--------+---------------+
+; clockpll:pll|dac_clk                                                        ; -4.866 ; -1859.241     ;
+; globalclock                                                                 ; -2.067 ; -8.633        ;
+; clockpll:pll|adc_clk                                                        ; -0.203 ; -3.389        ;
+; clockpll:pll|adc_clk_delay                                                  ; 0.109  ; 0.000         ;
+; ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start ; 0.111  ; 0.000         ;
+; clockpll:pll|uart_clk                                                       ; 0.233  ; 0.000         ;
+; DAC_control:DAC_control_inst|tx_spi_sync                                    ; 0.543  ; 0.000         ;
++-----------------------------------------------------------------------------+--------+---------------+
+
+
++-----------------------------------------------------+
+; Slow 1100mV 85C Model Recovery Summary              ;
++----------------------------+--------+---------------+
+; Clock                      ; Slack  ; End Point TNS ;
++----------------------------+--------+---------------+
+; clockpll:pll|uart_clk      ; -3.987 ; -85.853       ;
+; clockpll:pll|adc_clk_delay ; -2.326 ; -50.144       ;
+; clockpll:pll|adc_clk       ; -2.052 ; -21.832       ;
++----------------------------+--------+---------------+
+
+
++-----------------------------------------------------+
+; Slow 1100mV 85C Model Removal Summary               ;
++----------------------------+--------+---------------+
+; Clock                      ; Slack  ; End Point TNS ;
++----------------------------+--------+---------------+
+; clockpll:pll|adc_clk       ; -1.378 ; -15.571       ;
+; clockpll:pll|adc_clk_delay ; -0.894 ; -21.067       ;
+; clockpll:pll|uart_clk      ; 3.057  ; 0.000         ;
++----------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Minimum Pulse Width Summary                                                    ;
++-----------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                       ; Slack  ; End Point TNS ;
++-----------------------------------------------------------------------------+--------+---------------+
+; clockpll:pll|dac_clk                                                        ; -2.636 ; -4442.487     ;
+; clockpll:pll|adc_clk                                                        ; -0.604 ; -77.895       ;
+; DAC_control:DAC_control_inst|tx_spi_sync                                    ; -0.538 ; -77.191       ;
+; clockpll:pll|uart_clk                                                       ; -0.538 ; -37.548       ;
+; globalclock                                                                 ; -0.538 ; -33.490       ;
+; clockpll:pll|adc_clk_delay                                                  ; -0.538 ; -21.451       ;
+; ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start ; -0.538 ; -0.791        ;
++-----------------------------------------------------------------------------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Setup Times                                                                                      ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+; Data Port ; Clock Port                 ; Rise  ; Fall  ; Clock Edge ; Clock Reference            ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+; ADC_SDO   ; clockpll:pll|adc_clk_delay ; 4.848 ; 5.339 ; Fall       ; clockpll:pll|adc_clk_delay ;
+; rst       ; clockpll:pll|dac_clk       ; 2.782 ; 4.019 ; Fall       ; clockpll:pll|dac_clk       ;
+; rst       ; clockpll:pll|uart_clk      ; 6.505 ; 7.902 ; Rise       ; clockpll:pll|uart_clk      ;
+; rst       ; globalclock                ; 5.828 ; 8.055 ; Rise       ; globalclock                ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Hold Times                                                                                         ;
++-----------+----------------------------+--------+--------+------------+----------------------------+
+; Data Port ; Clock Port                 ; Rise   ; Fall   ; Clock Edge ; Clock Reference            ;
++-----------+----------------------------+--------+--------+------------+----------------------------+
+; ADC_SDO   ; clockpll:pll|adc_clk_delay ; -2.670 ; -3.123 ; Fall       ; clockpll:pll|adc_clk_delay ;
+; rst       ; clockpll:pll|dac_clk       ; 1.909  ; 1.426  ; Fall       ; clockpll:pll|dac_clk       ;
+; rst       ; clockpll:pll|uart_clk      ; -3.773 ; -4.723 ; Rise       ; clockpll:pll|uart_clk      ;
+; rst       ; globalclock                ; -0.703 ; -1.399 ; Rise       ; globalclock                ;
++-----------+----------------------------+--------+--------+------------+----------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                            ;
++-------------+------------------------------------------+--------+--------+------------+------------------------------------------+
+; Data Port   ; Clock Port                               ; Rise   ; Fall   ; Clock Edge ; Clock Reference                          ;
++-------------+------------------------------------------+--------+--------+------------+------------------------------------------+
+; ADC_SCK     ; DAC_control:DAC_control_inst|tx_spi_sync ; 11.511 ; 12.507 ; Rise       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; tx_spi_sync ; DAC_control:DAC_control_inst|tx_spi_sync ; 6.476  ;        ; Rise       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; tx_spi_sync ; DAC_control:DAC_control_inst|tx_spi_sync ;        ; 6.904  ; Fall       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; ADC_CONVST  ; clockpll:pll|adc_clk                     ; 11.762 ; 12.348 ; Rise       ; clockpll:pll|adc_clk                     ;
+; ADC_SCK     ; clockpll:pll|adc_clk                     ; 10.128 ;        ; Rise       ; clockpll:pll|adc_clk                     ;
+; ADC_SCK     ; clockpll:pll|adc_clk                     ; 11.339 ; 12.023 ; Fall       ; clockpll:pll|adc_clk                     ;
+; ADC_SDI     ; clockpll:pll|adc_clk                     ; 11.024 ; 11.825 ; Fall       ; clockpll:pll|adc_clk                     ;
+; tx_spi_din  ; clockpll:pll|dac_clk                     ; 14.782 ; 15.691 ; Rise       ; clockpll:pll|dac_clk                     ;
+; tx_spi_sclk ; clockpll:pll|dac_clk                     ; 10.360 ;        ; Rise       ; clockpll:pll|dac_clk                     ;
+; tx_spi_sclk ; clockpll:pll|dac_clk                     ;        ; 10.471 ; Fall       ; clockpll:pll|dac_clk                     ;
+; uart_tx     ; clockpll:pll|uart_clk                    ; 10.432 ; 11.237 ; Rise       ; clockpll:pll|uart_clk                    ;
++-------------+------------------------------------------+--------+--------+------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                                    ;
++-------------+------------------------------------------+--------+--------+------------+------------------------------------------+
+; Data Port   ; Clock Port                               ; Rise   ; Fall   ; Clock Edge ; Clock Reference                          ;
++-------------+------------------------------------------+--------+--------+------------+------------------------------------------+
+; ADC_SCK     ; DAC_control:DAC_control_inst|tx_spi_sync ; 9.189  ; 9.958  ; Rise       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; tx_spi_sync ; DAC_control:DAC_control_inst|tx_spi_sync ; 6.044  ;        ; Rise       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; tx_spi_sync ; DAC_control:DAC_control_inst|tx_spi_sync ;        ; 6.351  ; Fall       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; ADC_CONVST  ; clockpll:pll|adc_clk                     ; 8.094  ; 8.424  ; Rise       ; clockpll:pll|adc_clk                     ;
+; ADC_SCK     ; clockpll:pll|adc_clk                     ; 8.085  ;        ; Rise       ; clockpll:pll|adc_clk                     ;
+; ADC_SCK     ; clockpll:pll|adc_clk                     ; 8.792  ; 8.752  ; Fall       ; clockpll:pll|adc_clk                     ;
+; ADC_SDI     ; clockpll:pll|adc_clk                     ; 8.532  ; 9.193  ; Fall       ; clockpll:pll|adc_clk                     ;
+; tx_spi_din  ; clockpll:pll|dac_clk                     ; 11.936 ; 12.668 ; Rise       ; clockpll:pll|dac_clk                     ;
+; tx_spi_sclk ; clockpll:pll|dac_clk                     ; 7.924  ;        ; Rise       ; clockpll:pll|dac_clk                     ;
+; tx_spi_sclk ; clockpll:pll|dac_clk                     ;        ; 7.945  ; Fall       ; clockpll:pll|dac_clk                     ;
+; uart_tx     ; clockpll:pll|uart_clk                    ; 8.283  ; 8.939  ; Rise       ; clockpll:pll|uart_clk                    ;
++-------------+------------------------------------------+--------+--------+------------+------------------------------------------+
+
+
+----------------------------------------------
+; Slow 1100mV 85C Model Metastability Report ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Fmax Summary                                              ;
++------------+-----------------+------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                               ; Note ;
++------------+-----------------+------------------------------------------+------+
+; 52.6 MHz   ; 52.6 MHz        ; clockpll:pll|dac_clk                     ;      ;
+; 143.6 MHz  ; 143.6 MHz       ; clockpll:pll|adc_clk                     ;      ;
+; 166.64 MHz ; 166.64 MHz      ; DAC_control:DAC_control_inst|tx_spi_sync ;      ;
+; 226.14 MHz ; 226.14 MHz      ; clockpll:pll|uart_clk                    ;      ;
+; 274.2 MHz  ; 274.2 MHz       ; clockpll:pll|adc_clk_delay               ;      ;
+; 284.5 MHz  ; 284.5 MHz       ; globalclock                              ;      ;
++------------+-----------------+------------------------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-------------------------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Setup Summary                                                                    ;
++-----------------------------------------------------------------------------+---------+---------------+
+; Clock                                                                       ; Slack   ; End Point TNS ;
++-----------------------------------------------------------------------------+---------+---------------+
+; DAC_control:DAC_control_inst|tx_spi_sync                                    ; -10.562 ; -915.945      ;
+; clockpll:pll|uart_clk                                                       ; -9.791  ; -166.158      ;
+; clockpll:pll|dac_clk                                                        ; -9.005  ; -1498.082     ;
+; clockpll:pll|adc_clk                                                        ; -7.553  ; -258.332      ;
+; clockpll:pll|adc_clk_delay                                                  ; -2.647  ; -55.090       ;
+; globalclock                                                                 ; -2.515  ; -84.858       ;
+; ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start ; -1.020  ; -1.020        ;
++-----------------------------------------------------------------------------+---------+---------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Hold Summary                                                                    ;
++-----------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                       ; Slack  ; End Point TNS ;
++-----------------------------------------------------------------------------+--------+---------------+
+; clockpll:pll|dac_clk                                                        ; -4.897 ; -1933.059     ;
+; globalclock                                                                 ; -1.991 ; -8.613        ;
+; clockpll:pll|adc_clk                                                        ; -0.161 ; -2.269        ;
+; ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start ; 0.058  ; 0.000         ;
+; clockpll:pll|adc_clk_delay                                                  ; 0.150  ; 0.000         ;
+; clockpll:pll|uart_clk                                                       ; 0.199  ; 0.000         ;
+; DAC_control:DAC_control_inst|tx_spi_sync                                    ; 0.498  ; 0.000         ;
++-----------------------------------------------------------------------------+--------+---------------+
+
+
++-----------------------------------------------------+
+; Slow 1100mV 0C Model Recovery Summary               ;
++----------------------------+--------+---------------+
+; Clock                      ; Slack  ; End Point TNS ;
++----------------------------+--------+---------------+
+; clockpll:pll|uart_clk      ; -4.148 ; -89.534       ;
+; clockpll:pll|adc_clk_delay ; -2.193 ; -47.385       ;
+; clockpll:pll|adc_clk       ; -1.895 ; -20.703       ;
++----------------------------+--------+---------------+
+
+
++-----------------------------------------------------+
+; Slow 1100mV 0C Model Removal Summary                ;
++----------------------------+--------+---------------+
+; Clock                      ; Slack  ; End Point TNS ;
++----------------------------+--------+---------------+
+; clockpll:pll|adc_clk       ; -1.282 ; -14.723       ;
+; clockpll:pll|adc_clk_delay ; -0.866 ; -19.988       ;
+; clockpll:pll|uart_clk      ; 3.232  ; 0.000         ;
++----------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Minimum Pulse Width Summary                                                     ;
++-----------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                       ; Slack  ; End Point TNS ;
++-----------------------------------------------------------------------------+--------+---------------+
+; clockpll:pll|dac_clk                                                        ; -2.636 ; -4444.347     ;
+; clockpll:pll|adc_clk                                                        ; -0.642 ; -79.113       ;
+; DAC_control:DAC_control_inst|tx_spi_sync                                    ; -0.538 ; -77.256       ;
+; clockpll:pll|uart_clk                                                       ; -0.538 ; -37.912       ;
+; globalclock                                                                 ; -0.538 ; -37.707       ;
+; clockpll:pll|adc_clk_delay                                                  ; -0.538 ; -21.948       ;
+; ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start ; -0.538 ; -0.790        ;
++-----------------------------------------------------------------------------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Setup Times                                                                                      ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+; Data Port ; Clock Port                 ; Rise  ; Fall  ; Clock Edge ; Clock Reference            ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+; ADC_SDO   ; clockpll:pll|adc_clk_delay ; 4.865 ; 5.443 ; Fall       ; clockpll:pll|adc_clk_delay ;
+; rst       ; clockpll:pll|dac_clk       ; 2.671 ; 4.162 ; Fall       ; clockpll:pll|dac_clk       ;
+; rst       ; clockpll:pll|uart_clk      ; 6.629 ; 8.131 ; Rise       ; clockpll:pll|uart_clk      ;
+; rst       ; globalclock                ; 5.881 ; 8.308 ; Rise       ; globalclock                ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Hold Times                                                                                         ;
++-----------+----------------------------+--------+--------+------------+----------------------------+
+; Data Port ; Clock Port                 ; Rise   ; Fall   ; Clock Edge ; Clock Reference            ;
++-----------+----------------------------+--------+--------+------------+----------------------------+
+; ADC_SDO   ; clockpll:pll|adc_clk_delay ; -2.674 ; -3.155 ; Fall       ; clockpll:pll|adc_clk_delay ;
+; rst       ; clockpll:pll|dac_clk       ; 1.943  ; 1.222  ; Fall       ; clockpll:pll|dac_clk       ;
+; rst       ; clockpll:pll|uart_clk      ; -3.815 ; -4.888 ; Rise       ; clockpll:pll|uart_clk      ;
+; rst       ; globalclock                ; -0.545 ; -1.358 ; Rise       ; globalclock                ;
++-----------+----------------------------+--------+--------+------------+----------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                            ;
++-------------+------------------------------------------+--------+--------+------------+------------------------------------------+
+; Data Port   ; Clock Port                               ; Rise   ; Fall   ; Clock Edge ; Clock Reference                          ;
++-------------+------------------------------------------+--------+--------+------------+------------------------------------------+
+; ADC_SCK     ; DAC_control:DAC_control_inst|tx_spi_sync ; 11.200 ; 12.294 ; Rise       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; tx_spi_sync ; DAC_control:DAC_control_inst|tx_spi_sync ; 6.228  ;        ; Rise       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; tx_spi_sync ; DAC_control:DAC_control_inst|tx_spi_sync ;        ; 6.723  ; Fall       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; ADC_CONVST  ; clockpll:pll|adc_clk                     ; 11.409 ; 12.123 ; Rise       ; clockpll:pll|adc_clk                     ;
+; ADC_SCK     ; clockpll:pll|adc_clk                     ; 9.897  ;        ; Rise       ; clockpll:pll|adc_clk                     ;
+; ADC_SCK     ; clockpll:pll|adc_clk                     ; 10.999 ; 11.774 ; Fall       ; clockpll:pll|adc_clk                     ;
+; ADC_SDI     ; clockpll:pll|adc_clk                     ; 10.724 ; 11.627 ; Fall       ; clockpll:pll|adc_clk                     ;
+; tx_spi_din  ; clockpll:pll|dac_clk                     ; 14.483 ; 15.501 ; Rise       ; clockpll:pll|dac_clk                     ;
+; tx_spi_sclk ; clockpll:pll|dac_clk                     ; 10.115 ;        ; Rise       ; clockpll:pll|dac_clk                     ;
+; tx_spi_sclk ; clockpll:pll|dac_clk                     ;        ; 10.285 ; Fall       ; clockpll:pll|dac_clk                     ;
+; uart_tx     ; clockpll:pll|uart_clk                    ; 10.088 ; 10.991 ; Rise       ; clockpll:pll|uart_clk                    ;
++-------------+------------------------------------------+--------+--------+------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                                    ;
++-------------+------------------------------------------+--------+--------+------------+------------------------------------------+
+; Data Port   ; Clock Port                               ; Rise   ; Fall   ; Clock Edge ; Clock Reference                          ;
++-------------+------------------------------------------+--------+--------+------------+------------------------------------------+
+; ADC_SCK     ; DAC_control:DAC_control_inst|tx_spi_sync ; 8.884  ; 9.749  ; Rise       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; tx_spi_sync ; DAC_control:DAC_control_inst|tx_spi_sync ; 5.783  ;        ; Rise       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; tx_spi_sync ; DAC_control:DAC_control_inst|tx_spi_sync ;        ; 6.155  ; Fall       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; ADC_CONVST  ; clockpll:pll|adc_clk                     ; 7.678  ; 8.092  ; Rise       ; clockpll:pll|adc_clk                     ;
+; ADC_SCK     ; clockpll:pll|adc_clk                     ; 7.858  ;        ; Rise       ; clockpll:pll|adc_clk                     ;
+; ADC_SCK     ; clockpll:pll|adc_clk                     ; 8.537  ; 8.674  ; Fall       ; clockpll:pll|adc_clk                     ;
+; ADC_SDI     ; clockpll:pll|adc_clk                     ; 8.307  ; 9.084  ; Fall       ; clockpll:pll|adc_clk                     ;
+; tx_spi_din  ; clockpll:pll|dac_clk                     ; 11.661 ; 12.521 ; Rise       ; clockpll:pll|dac_clk                     ;
+; tx_spi_sclk ; clockpll:pll|dac_clk                     ; 7.712  ;        ; Rise       ; clockpll:pll|dac_clk                     ;
+; tx_spi_sclk ; clockpll:pll|dac_clk                     ;        ; 7.789  ; Fall       ; clockpll:pll|dac_clk                     ;
+; uart_tx     ; clockpll:pll|uart_clk                    ; 7.962  ; 8.718  ; Rise       ; clockpll:pll|uart_clk                    ;
++-------------+------------------------------------------+--------+--------+------------+------------------------------------------+
+
+
+---------------------------------------------
+; Slow 1100mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Setup Summary                                                                  ;
++-----------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                       ; Slack  ; End Point TNS ;
++-----------------------------------------------------------------------------+--------+---------------+
+; DAC_control:DAC_control_inst|tx_spi_sync                                    ; -5.303 ; -457.167      ;
+; clockpll:pll|uart_clk                                                       ; -4.712 ; -67.467       ;
+; clockpll:pll|dac_clk                                                        ; -4.368 ; -637.738      ;
+; clockpll:pll|adc_clk                                                        ; -3.509 ; -107.696      ;
+; clockpll:pll|adc_clk_delay                                                  ; -0.892 ; -17.109       ;
+; globalclock                                                                 ; -0.700 ; -21.237       ;
+; ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start ; -0.594 ; -0.594        ;
++-----------------------------------------------------------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary                                                                   ;
++-----------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                       ; Slack  ; End Point TNS ;
++-----------------------------------------------------------------------------+--------+---------------+
+; clockpll:pll|dac_clk                                                        ; -2.664 ; -955.614      ;
+; globalclock                                                                 ; -1.028 ; -4.297        ;
+; clockpll:pll|adc_clk                                                        ; -0.392 ; -6.470        ;
+; clockpll:pll|adc_clk_delay                                                  ; -0.101 ; -0.309        ;
+; clockpll:pll|uart_clk                                                       ; -0.039 ; -0.039        ;
+; ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start ; 0.065  ; 0.000         ;
+; DAC_control:DAC_control_inst|tx_spi_sync                                    ; 0.215  ; 0.000         ;
++-----------------------------------------------------------------------------+--------+---------------+
+
+
++-----------------------------------------------------+
+; Fast 1100mV 85C Model Recovery Summary              ;
++----------------------------+--------+---------------+
+; Clock                      ; Slack  ; End Point TNS ;
++----------------------------+--------+---------------+
+; clockpll:pll|uart_clk      ; -1.514 ; -32.478       ;
+; clockpll:pll|adc_clk_delay ; -1.065 ; -20.856       ;
+; clockpll:pll|adc_clk       ; -0.885 ; -7.847        ;
++----------------------------+--------+---------------+
+
+
++-----------------------------------------------------+
+; Fast 1100mV 85C Model Removal Summary               ;
++----------------------------+--------+---------------+
+; Clock                      ; Slack  ; End Point TNS ;
++----------------------------+--------+---------------+
+; clockpll:pll|adc_clk       ; -0.927 ; -10.494       ;
+; clockpll:pll|adc_clk_delay ; -0.758 ; -17.624       ;
+; clockpll:pll|uart_clk      ; 1.241  ; 0.000         ;
++----------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Minimum Pulse Width Summary                                                    ;
++-----------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                       ; Slack  ; End Point TNS ;
++-----------------------------------------------------------------------------+--------+---------------+
+; clockpll:pll|dac_clk                                                        ; -2.174 ; -3524.742     ;
+; globalclock                                                                 ; -0.485 ; -4.440        ;
+; clockpll:pll|adc_clk                                                        ; -0.231 ; -6.061        ;
+; clockpll:pll|uart_clk                                                       ; -0.127 ; -0.898        ;
+; DAC_control:DAC_control_inst|tx_spi_sync                                    ; -0.034 ; -0.587        ;
+; clockpll:pll|adc_clk_delay                                                  ; -0.006 ; -0.070        ;
+; ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start ; 0.066  ; 0.000         ;
++-----------------------------------------------------------------------------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Setup Times                                                                                      ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+; Data Port ; Clock Port                 ; Rise  ; Fall  ; Clock Edge ; Clock Reference            ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+; ADC_SDO   ; clockpll:pll|adc_clk_delay ; 2.260 ; 3.075 ; Fall       ; clockpll:pll|adc_clk_delay ;
+; rst       ; clockpll:pll|dac_clk       ; 1.458 ; 3.006 ; Fall       ; clockpll:pll|dac_clk       ;
+; rst       ; clockpll:pll|uart_clk      ; 3.571 ; 5.151 ; Rise       ; clockpll:pll|uart_clk      ;
+; rst       ; globalclock                ; 3.565 ; 5.717 ; Rise       ; globalclock                ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Hold Times                                                                                         ;
++-----------+----------------------------+--------+--------+------------+----------------------------+
+; Data Port ; Clock Port                 ; Rise   ; Fall   ; Clock Edge ; Clock Reference            ;
++-----------+----------------------------+--------+--------+------------+----------------------------+
+; ADC_SDO   ; clockpll:pll|adc_clk_delay ; -1.317 ; -2.006 ; Fall       ; clockpll:pll|adc_clk_delay ;
+; rst       ; clockpll:pll|dac_clk       ; 0.743  ; -0.228 ; Fall       ; clockpll:pll|dac_clk       ;
+; rst       ; clockpll:pll|uart_clk      ; -2.141 ; -3.310 ; Rise       ; clockpll:pll|uart_clk      ;
+; rst       ; globalclock                ; -0.704 ; -1.697 ; Rise       ; globalclock                ;
++-----------+----------------------------+--------+--------+------------+----------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                          ;
++-------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; Data Port   ; Clock Port                               ; Rise  ; Fall  ; Clock Edge ; Clock Reference                          ;
++-------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; ADC_SCK     ; DAC_control:DAC_control_inst|tx_spi_sync ; 6.104 ; 6.974 ; Rise       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; tx_spi_sync ; DAC_control:DAC_control_inst|tx_spi_sync ; 3.640 ;       ; Rise       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; tx_spi_sync ; DAC_control:DAC_control_inst|tx_spi_sync ;       ; 4.105 ; Fall       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; ADC_CONVST  ; clockpll:pll|adc_clk                     ; 5.989 ; 6.552 ; Rise       ; clockpll:pll|adc_clk                     ;
+; ADC_SCK     ; clockpll:pll|adc_clk                     ; 5.496 ;       ; Rise       ; clockpll:pll|adc_clk                     ;
+; ADC_SCK     ; clockpll:pll|adc_clk                     ; 6.218 ; 6.946 ; Fall       ; clockpll:pll|adc_clk                     ;
+; ADC_SDI     ; clockpll:pll|adc_clk                     ; 6.044 ; 6.825 ; Fall       ; clockpll:pll|adc_clk                     ;
+; tx_spi_din  ; clockpll:pll|dac_clk                     ; 7.874 ; 8.754 ; Rise       ; clockpll:pll|dac_clk                     ;
+; tx_spi_sclk ; clockpll:pll|dac_clk                     ; 5.419 ;       ; Rise       ; clockpll:pll|dac_clk                     ;
+; tx_spi_sclk ; clockpll:pll|dac_clk                     ;       ; 5.711 ; Fall       ; clockpll:pll|dac_clk                     ;
+; uart_tx     ; clockpll:pll|uart_clk                    ; 5.661 ; 6.456 ; Rise       ; clockpll:pll|uart_clk                    ;
++-------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                                  ;
++-------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; Data Port   ; Clock Port                               ; Rise  ; Fall  ; Clock Edge ; Clock Reference                          ;
++-------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; ADC_SCK     ; DAC_control:DAC_control_inst|tx_spi_sync ; 4.996 ; 5.741 ; Rise       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; tx_spi_sync ; DAC_control:DAC_control_inst|tx_spi_sync ; 3.431 ;       ; Rise       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; tx_spi_sync ; DAC_control:DAC_control_inst|tx_spi_sync ;       ; 3.831 ; Fall       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; ADC_CONVST  ; clockpll:pll|adc_clk                     ; 4.312 ; 4.682 ; Rise       ; clockpll:pll|adc_clk                     ;
+; ADC_SCK     ; clockpll:pll|adc_clk                     ; 4.571 ;       ; Rise       ; clockpll:pll|adc_clk                     ;
+; ADC_SCK     ; clockpll:pll|adc_clk                     ; 5.039 ; 5.347 ; Fall       ; clockpll:pll|adc_clk                     ;
+; ADC_SDI     ; clockpll:pll|adc_clk                     ; 4.897 ; 5.596 ; Fall       ; clockpll:pll|adc_clk                     ;
+; tx_spi_din  ; clockpll:pll|dac_clk                     ; 6.622 ; 7.392 ; Rise       ; clockpll:pll|dac_clk                     ;
+; tx_spi_sclk ; clockpll:pll|dac_clk                     ; 4.377 ;       ; Rise       ; clockpll:pll|dac_clk                     ;
+; tx_spi_sclk ; clockpll:pll|dac_clk                     ;       ; 4.618 ; Fall       ; clockpll:pll|dac_clk                     ;
+; uart_tx     ; clockpll:pll|uart_clk                    ; 4.617 ; 5.323 ; Rise       ; clockpll:pll|uart_clk                    ;
++-------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+
+
+----------------------------------------------
+; Fast 1100mV 85C Model Metastability Report ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------------------------------------------------------------------------+
+; Fast 1100mV 0C Model Setup Summary                                                                   ;
++-----------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                       ; Slack  ; End Point TNS ;
++-----------------------------------------------------------------------------+--------+---------------+
+; DAC_control:DAC_control_inst|tx_spi_sync                                    ; -4.973 ; -429.686      ;
+; clockpll:pll|uart_clk                                                       ; -4.491 ; -62.793       ;
+; clockpll:pll|dac_clk                                                        ; -4.135 ; -532.659      ;
+; clockpll:pll|adc_clk                                                        ; -3.272 ; -97.022       ;
+; clockpll:pll|adc_clk_delay                                                  ; -0.769 ; -14.898       ;
+; globalclock                                                                 ; -0.646 ; -17.382       ;
+; ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start ; -0.535 ; -0.535        ;
++-----------------------------------------------------------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary                                                                    ;
++-----------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                       ; Slack  ; End Point TNS ;
++-----------------------------------------------------------------------------+--------+---------------+
+; clockpll:pll|dac_clk                                                        ; -2.570 ; -944.148      ;
+; globalclock                                                                 ; -1.001 ; -4.391        ;
+; clockpll:pll|adc_clk                                                        ; -0.395 ; -6.461        ;
+; clockpll:pll|adc_clk_delay                                                  ; -0.112 ; -0.348        ;
+; clockpll:pll|uart_clk                                                       ; -0.041 ; -0.041        ;
+; ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start ; 0.051  ; 0.000         ;
+; DAC_control:DAC_control_inst|tx_spi_sync                                    ; 0.190  ; 0.000         ;
++-----------------------------------------------------------------------------+--------+---------------+
+
+
++-----------------------------------------------------+
+; Fast 1100mV 0C Model Recovery Summary               ;
++----------------------------+--------+---------------+
+; Clock                      ; Slack  ; End Point TNS ;
++----------------------------+--------+---------------+
+; clockpll:pll|uart_clk      ; -1.477 ; -31.738       ;
+; clockpll:pll|adc_clk_delay ; -0.950 ; -18.221       ;
+; clockpll:pll|adc_clk       ; -0.781 ; -6.469        ;
++----------------------------+--------+---------------+
+
+
++-----------------------------------------------------+
+; Fast 1100mV 0C Model Removal Summary                ;
++----------------------------+--------+---------------+
+; Clock                      ; Slack  ; End Point TNS ;
++----------------------------+--------+---------------+
+; clockpll:pll|adc_clk       ; -0.880 ; -10.112       ;
+; clockpll:pll|adc_clk_delay ; -0.724 ; -16.918       ;
+; clockpll:pll|uart_clk      ; 1.233  ; 0.000         ;
++----------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Fast 1100mV 0C Model Minimum Pulse Width Summary                                                     ;
++-----------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                       ; Slack  ; End Point TNS ;
++-----------------------------------------------------------------------------+--------+---------------+
+; clockpll:pll|dac_clk                                                        ; -2.174 ; -3529.469     ;
+; globalclock                                                                 ; -0.462 ; -4.563        ;
+; clockpll:pll|adc_clk                                                        ; -0.170 ; -4.070        ;
+; clockpll:pll|uart_clk                                                       ; -0.087 ; -0.346        ;
+; DAC_control:DAC_control_inst|tx_spi_sync                                    ; -0.003 ; -0.033        ;
+; clockpll:pll|adc_clk_delay                                                  ; 0.005  ; 0.000         ;
+; ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start ; 0.087  ; 0.000         ;
++-----------------------------------------------------------------------------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Setup Times                                                                                      ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+; Data Port ; Clock Port                 ; Rise  ; Fall  ; Clock Edge ; Clock Reference            ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+; ADC_SDO   ; clockpll:pll|adc_clk_delay ; 2.165 ; 2.958 ; Fall       ; clockpll:pll|adc_clk_delay ;
+; rst       ; clockpll:pll|dac_clk       ; 1.504 ; 2.939 ; Fall       ; clockpll:pll|dac_clk       ;
+; rst       ; clockpll:pll|uart_clk      ; 3.487 ; 4.951 ; Rise       ; clockpll:pll|uart_clk      ;
+; rst       ; globalclock                ; 3.507 ; 5.451 ; Rise       ; globalclock                ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Hold Times                                                                                         ;
++-----------+----------------------------+--------+--------+------------+----------------------------+
+; Data Port ; Clock Port                 ; Rise   ; Fall   ; Clock Edge ; Clock Reference            ;
++-----------+----------------------------+--------+--------+------------+----------------------------+
+; ADC_SDO   ; clockpll:pll|adc_clk_delay ; -1.284 ; -1.958 ; Fall       ; clockpll:pll|adc_clk_delay ;
+; rst       ; clockpll:pll|dac_clk       ; 0.641  ; -0.295 ; Fall       ; clockpll:pll|dac_clk       ;
+; rst       ; clockpll:pll|uart_clk      ; -2.133 ; -3.207 ; Rise       ; clockpll:pll|uart_clk      ;
+; rst       ; globalclock                ; -0.672 ; -1.601 ; Rise       ; globalclock                ;
++-----------+----------------------------+--------+--------+------------+----------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                          ;
++-------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; Data Port   ; Clock Port                               ; Rise  ; Fall  ; Clock Edge ; Clock Reference                          ;
++-------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; ADC_SCK     ; DAC_control:DAC_control_inst|tx_spi_sync ; 5.742 ; 6.479 ; Rise       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; tx_spi_sync ; DAC_control:DAC_control_inst|tx_spi_sync ; 3.351 ;       ; Rise       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; tx_spi_sync ; DAC_control:DAC_control_inst|tx_spi_sync ;       ; 3.749 ; Fall       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; ADC_CONVST  ; clockpll:pll|adc_clk                     ; 5.579 ; 6.079 ; Rise       ; clockpll:pll|adc_clk                     ;
+; ADC_SCK     ; clockpll:pll|adc_clk                     ; 5.204 ;       ; Rise       ; clockpll:pll|adc_clk                     ;
+; ADC_SCK     ; clockpll:pll|adc_clk                     ; 5.842 ; 6.453 ; Fall       ; clockpll:pll|adc_clk                     ;
+; ADC_SDI     ; clockpll:pll|adc_clk                     ; 5.692 ; 6.343 ; Fall       ; clockpll:pll|adc_clk                     ;
+; tx_spi_din  ; clockpll:pll|dac_clk                     ; 7.422 ; 8.158 ; Rise       ; clockpll:pll|dac_clk                     ;
+; tx_spi_sclk ; clockpll:pll|dac_clk                     ; 5.089 ;       ; Rise       ; clockpll:pll|dac_clk                     ;
+; tx_spi_sclk ; clockpll:pll|dac_clk                     ;       ; 5.339 ; Fall       ; clockpll:pll|dac_clk                     ;
+; uart_tx     ; clockpll:pll|uart_clk                    ; 5.315 ; 6.003 ; Rise       ; clockpll:pll|uart_clk                    ;
++-------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                                  ;
++-------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; Data Port   ; Clock Port                               ; Rise  ; Fall  ; Clock Edge ; Clock Reference                          ;
++-------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; ADC_SCK     ; DAC_control:DAC_control_inst|tx_spi_sync ; 4.656 ; 5.273 ; Rise       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; tx_spi_sync ; DAC_control:DAC_control_inst|tx_spi_sync ; 3.159 ;       ; Rise       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; tx_spi_sync ; DAC_control:DAC_control_inst|tx_spi_sync ;       ; 3.486 ; Fall       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; ADC_CONVST  ; clockpll:pll|adc_clk                     ; 3.955 ; 4.265 ; Rise       ; clockpll:pll|adc_clk                     ;
+; ADC_SCK     ; clockpll:pll|adc_clk                     ; 4.292 ;       ; Rise       ; clockpll:pll|adc_clk                     ;
+; ADC_SCK     ; clockpll:pll|adc_clk                     ; 4.714 ; 4.944 ; Fall       ; clockpll:pll|adc_clk                     ;
+; ADC_SDI     ; clockpll:pll|adc_clk                     ; 4.593 ; 5.168 ; Fall       ; clockpll:pll|adc_clk                     ;
+; tx_spi_din  ; clockpll:pll|dac_clk                     ; 6.199 ; 6.839 ; Rise       ; clockpll:pll|dac_clk                     ;
+; tx_spi_sclk ; clockpll:pll|dac_clk                     ; 4.062 ;       ; Rise       ; clockpll:pll|dac_clk                     ;
+; tx_spi_sclk ; clockpll:pll|dac_clk                     ;       ; 4.257 ; Fall       ; clockpll:pll|dac_clk                     ;
+; uart_tx     ; clockpll:pll|uart_clk                    ; 4.293 ; 4.892 ; Rise       ; clockpll:pll|uart_clk                    ;
++-------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+
+
+---------------------------------------------
+; Fast 1100mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                                                             ;
++------------------------------------------------------------------------------+-----------+-----------+----------+---------+---------------------+
+; Clock                                                                        ; Setup     ; Hold      ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------------------------------------------------------------------+-----------+-----------+----------+---------+---------------------+
+; Worst-case Slack                                                             ; -10.659   ; -4.897    ; -4.148   ; -1.378  ; -2.636              ;
+;  ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start ; -1.048    ; 0.051     ; N/A      ; N/A     ; -0.538              ;
+;  DAC_control:DAC_control_inst|tx_spi_sync                                    ; -10.659   ; 0.190     ; N/A      ; N/A     ; -0.538              ;
+;  clockpll:pll|adc_clk                                                        ; -7.609    ; -0.395    ; -2.052   ; -1.378  ; -0.642              ;
+;  clockpll:pll|adc_clk_delay                                                  ; -2.647    ; -0.112    ; -2.326   ; -0.894  ; -0.538              ;
+;  clockpll:pll|dac_clk                                                        ; -9.005    ; -4.897    ; N/A      ; N/A     ; -2.636              ;
+;  clockpll:pll|uart_clk                                                       ; -9.791    ; -0.041    ; -4.148   ; 1.233   ; -0.538              ;
+;  globalclock                                                                 ; -2.515    ; -2.067    ; N/A      ; N/A     ; -0.538              ;
+; Design-wide TNS                                                              ; -3038.344 ; -1943.941 ; -157.829 ; -36.638 ; -4699.073           ;
+;  ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start ; -1.048    ; 0.000     ; N/A      ; N/A     ; -0.791              ;
+;  DAC_control:DAC_control_inst|tx_spi_sync                                    ; -922.919  ; 0.000     ; N/A      ; N/A     ; -77.256             ;
+;  clockpll:pll|adc_clk                                                        ; -263.926  ; -6.470    ; -21.832  ; -15.571 ; -79.113             ;
+;  clockpll:pll|adc_clk_delay                                                  ; -55.090   ; -0.348    ; -50.144  ; -21.067 ; -21.948             ;
+;  clockpll:pll|dac_clk                                                        ; -1549.520 ; -1933.059 ; N/A      ; N/A     ; -4444.347           ;
+;  clockpll:pll|uart_clk                                                       ; -166.158  ; -0.041    ; -89.534  ; 0.000   ; -37.912             ;
+;  globalclock                                                                 ; -84.858   ; -8.633    ; N/A      ; N/A     ; -37.707             ;
++------------------------------------------------------------------------------+-----------+-----------+----------+---------+---------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Setup Times                                                                                      ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+; Data Port ; Clock Port                 ; Rise  ; Fall  ; Clock Edge ; Clock Reference            ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+; ADC_SDO   ; clockpll:pll|adc_clk_delay ; 4.865 ; 5.443 ; Fall       ; clockpll:pll|adc_clk_delay ;
+; rst       ; clockpll:pll|dac_clk       ; 2.782 ; 4.162 ; Fall       ; clockpll:pll|dac_clk       ;
+; rst       ; clockpll:pll|uart_clk      ; 6.629 ; 8.131 ; Rise       ; clockpll:pll|uart_clk      ;
+; rst       ; globalclock                ; 5.881 ; 8.308 ; Rise       ; globalclock                ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Hold Times                                                                                         ;
++-----------+----------------------------+--------+--------+------------+----------------------------+
+; Data Port ; Clock Port                 ; Rise   ; Fall   ; Clock Edge ; Clock Reference            ;
++-----------+----------------------------+--------+--------+------------+----------------------------+
+; ADC_SDO   ; clockpll:pll|adc_clk_delay ; -1.284 ; -1.958 ; Fall       ; clockpll:pll|adc_clk_delay ;
+; rst       ; clockpll:pll|dac_clk       ; 1.943  ; 1.426  ; Fall       ; clockpll:pll|dac_clk       ;
+; rst       ; clockpll:pll|uart_clk      ; -2.133 ; -3.207 ; Rise       ; clockpll:pll|uart_clk      ;
+; rst       ; globalclock                ; -0.545 ; -1.358 ; Rise       ; globalclock                ;
++-----------+----------------------------+--------+--------+------------+----------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                            ;
++-------------+------------------------------------------+--------+--------+------------+------------------------------------------+
+; Data Port   ; Clock Port                               ; Rise   ; Fall   ; Clock Edge ; Clock Reference                          ;
++-------------+------------------------------------------+--------+--------+------------+------------------------------------------+
+; ADC_SCK     ; DAC_control:DAC_control_inst|tx_spi_sync ; 11.511 ; 12.507 ; Rise       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; tx_spi_sync ; DAC_control:DAC_control_inst|tx_spi_sync ; 6.476  ;        ; Rise       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; tx_spi_sync ; DAC_control:DAC_control_inst|tx_spi_sync ;        ; 6.904  ; Fall       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; ADC_CONVST  ; clockpll:pll|adc_clk                     ; 11.762 ; 12.348 ; Rise       ; clockpll:pll|adc_clk                     ;
+; ADC_SCK     ; clockpll:pll|adc_clk                     ; 10.128 ;        ; Rise       ; clockpll:pll|adc_clk                     ;
+; ADC_SCK     ; clockpll:pll|adc_clk                     ; 11.339 ; 12.023 ; Fall       ; clockpll:pll|adc_clk                     ;
+; ADC_SDI     ; clockpll:pll|adc_clk                     ; 11.024 ; 11.825 ; Fall       ; clockpll:pll|adc_clk                     ;
+; tx_spi_din  ; clockpll:pll|dac_clk                     ; 14.782 ; 15.691 ; Rise       ; clockpll:pll|dac_clk                     ;
+; tx_spi_sclk ; clockpll:pll|dac_clk                     ; 10.360 ;        ; Rise       ; clockpll:pll|dac_clk                     ;
+; tx_spi_sclk ; clockpll:pll|dac_clk                     ;        ; 10.471 ; Fall       ; clockpll:pll|dac_clk                     ;
+; uart_tx     ; clockpll:pll|uart_clk                    ; 10.432 ; 11.237 ; Rise       ; clockpll:pll|uart_clk                    ;
++-------------+------------------------------------------+--------+--------+------------+------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                                  ;
++-------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; Data Port   ; Clock Port                               ; Rise  ; Fall  ; Clock Edge ; Clock Reference                          ;
++-------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+; ADC_SCK     ; DAC_control:DAC_control_inst|tx_spi_sync ; 4.656 ; 5.273 ; Rise       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; tx_spi_sync ; DAC_control:DAC_control_inst|tx_spi_sync ; 3.159 ;       ; Rise       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; tx_spi_sync ; DAC_control:DAC_control_inst|tx_spi_sync ;       ; 3.486 ; Fall       ; DAC_control:DAC_control_inst|tx_spi_sync ;
+; ADC_CONVST  ; clockpll:pll|adc_clk                     ; 3.955 ; 4.265 ; Rise       ; clockpll:pll|adc_clk                     ;
+; ADC_SCK     ; clockpll:pll|adc_clk                     ; 4.292 ;       ; Rise       ; clockpll:pll|adc_clk                     ;
+; ADC_SCK     ; clockpll:pll|adc_clk                     ; 4.714 ; 4.944 ; Fall       ; clockpll:pll|adc_clk                     ;
+; ADC_SDI     ; clockpll:pll|adc_clk                     ; 4.593 ; 5.168 ; Fall       ; clockpll:pll|adc_clk                     ;
+; tx_spi_din  ; clockpll:pll|dac_clk                     ; 6.199 ; 6.839 ; Rise       ; clockpll:pll|dac_clk                     ;
+; tx_spi_sclk ; clockpll:pll|dac_clk                     ; 4.062 ;       ; Rise       ; clockpll:pll|dac_clk                     ;
+; tx_spi_sclk ; clockpll:pll|dac_clk                     ;       ; 4.257 ; Fall       ; clockpll:pll|dac_clk                     ;
+; uart_tx     ; clockpll:pll|uart_clk                    ; 4.293 ; 4.892 ; Rise       ; clockpll:pll|uart_clk                    ;
++-------------+------------------------------------------+-------+-------+------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                  ;
++-------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin         ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++-------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; tx_spi_sclk ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; tx_spi_sync ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; tx_spi_din  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ADC_CONVST  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ADC_SCK     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ADC_SDI     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; uart_tx     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++-------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------+
+; Input Transition Times                                         ;
++-------------+--------------+-----------------+-----------------+
+; Pin         ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------+--------------+-----------------+-----------------+
+; globalclock ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; rst         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ADC_SDO     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------+--------------+-----------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1100mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
++-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin         ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; tx_spi_sclk ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0495 V           ; 0.18 V                               ; 0.115 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0495 V          ; 0.18 V                              ; 0.115 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
+; tx_spi_sync ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0492 V           ; 0.181 V                              ; 0.116 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0492 V          ; 0.181 V                             ; 0.116 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
+; tx_spi_din  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0492 V           ; 0.181 V                              ; 0.116 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0492 V          ; 0.181 V                             ; 0.116 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
+; ADC_CONVST  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0492 V           ; 0.181 V                              ; 0.116 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0492 V          ; 0.181 V                             ; 0.116 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
+; ADC_SCK     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0495 V           ; 0.18 V                               ; 0.115 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0495 V          ; 0.18 V                              ; 0.115 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
+; ADC_SDI     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0495 V           ; 0.18 V                               ; 0.115 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0495 V          ; 0.18 V                              ; 0.115 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
+; uart_tx     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.88e-07 V                   ; 2.35 V              ; -0.0185 V           ; 0.153 V                              ; 0.099 V                              ; 4.6e-10 s                   ; 4.48e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.88e-07 V                  ; 2.35 V             ; -0.0185 V          ; 0.153 V                             ; 0.099 V                             ; 4.6e-10 s                  ; 4.48e-10 s                 ; No                        ; Yes                       ;
++-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1100mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
++-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin         ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; tx_spi_sclk ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.0315 V           ; 0.205 V                              ; 0.182 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.0315 V          ; 0.205 V                             ; 0.182 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
+; tx_spi_sync ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.032 V            ; 0.204 V                              ; 0.181 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.032 V           ; 0.204 V                             ; 0.181 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
+; tx_spi_din  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.032 V            ; 0.204 V                              ; 0.181 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.032 V           ; 0.204 V                             ; 0.181 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
+; ADC_CONVST  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.032 V            ; 0.204 V                              ; 0.181 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.032 V           ; 0.204 V                             ; 0.181 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
+; ADC_SCK     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.0315 V           ; 0.205 V                              ; 0.182 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.0315 V          ; 0.205 V                             ; 0.182 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
+; ADC_SDI     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.0315 V           ; 0.205 V                              ; 0.182 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.0315 V          ; 0.205 V                             ; 0.182 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
+; uart_tx     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.27e-05 V                   ; 2.34 V              ; -0.0089 V           ; 0.206 V                              ; 0.058 V                              ; 4.97e-10 s                  ; 5.13e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.27e-05 V                  ; 2.34 V             ; -0.0089 V          ; 0.206 V                             ; 0.058 V                             ; 4.97e-10 s                 ; 5.13e-10 s                 ; Yes                       ; Yes                       ;
++-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1100mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
++-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin         ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; tx_spi_sclk ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; tx_spi_sync ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; tx_spi_din  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; ADC_CONVST  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; ADC_SCK     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; ADC_SDI     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; uart_tx     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
++-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1100mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
++-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin         ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; tx_spi_sclk ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; tx_spi_sync ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; tx_spi_din  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; ADC_CONVST  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; ADC_SCK     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; ADC_SDI     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; uart_tx     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
++-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                                                                                                       ;
++-----------------------------------------------------------------------------+-----------------------------------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                                                  ; To Clock                                                                    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------------------------------------------------------------+-----------------------------------------------------------------------------+----------+----------+----------+----------+
+; clockpll:pll|adc_clk                                                        ; ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start ; 0        ; 0        ; 1        ; 0        ;
+; ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start ; clockpll:pll|adc_clk                                                        ; 0        ; 0        ; 0        ; 1        ;
+; clockpll:pll|adc_clk                                                        ; clockpll:pll|adc_clk                                                        ; 367      ; 0        ; 98       ; 12       ;
+; clockpll:pll|adc_clk_delay                                                  ; clockpll:pll|adc_clk                                                        ; 8        ; 24       ; 0        ; 0        ;
+; clockpll:pll|dac_clk                                                        ; clockpll:pll|adc_clk                                                        ; 24       ; 0        ; 0        ; 0        ;
+; DAC_control:DAC_control_inst|tx_spi_sync                                    ; clockpll:pll|adc_clk                                                        ; 244      ; 0        ; 0        ; 0        ;
+; clockpll:pll|adc_clk                                                        ; clockpll:pll|adc_clk_delay                                                  ; 0        ; 0        ; 0        ; 16       ;
+; clockpll:pll|adc_clk_delay                                                  ; clockpll:pll|adc_clk_delay                                                  ; 115      ; 0        ; 0        ; 70       ;
+; clockpll:pll|adc_clk                                                        ; clockpll:pll|dac_clk                                                        ; 2232     ; 0        ; 0        ; 0        ;
+; clockpll:pll|dac_clk                                                        ; clockpll:pll|dac_clk                                                        ; 1146     ; 328      ; 0        ; 85       ;
+; clockpll:pll|uart_clk                                                       ; clockpll:pll|dac_clk                                                        ; 104      ; 0        ; 2        ; 0        ;
+; DAC_control:DAC_control_inst|tx_spi_sync                                    ; clockpll:pll|dac_clk                                                        ; 790      ; 7        ; 0        ; 0        ;
+; clockpll:pll|dac_clk                                                        ; clockpll:pll|uart_clk                                                       ; 24       ; 0        ; 0        ; 0        ;
+; clockpll:pll|uart_clk                                                       ; clockpll:pll|uart_clk                                                       ; 846      ; 0        ; 0        ; 0        ;
+; clockpll:pll|dac_clk                                                        ; DAC_control:DAC_control_inst|tx_spi_sync                                    ; 267      ; 1629     ; 0        ; 0        ;
+; DAC_control:DAC_control_inst|tx_spi_sync                                    ; DAC_control:DAC_control_inst|tx_spi_sync                                    ; 6912     ; 0        ; 0        ; 0        ;
+; clockpll:pll|adc_clk                                                        ; globalclock                                                                 ; 1        ; 1        ; 0        ; 0        ;
+; clockpll:pll|adc_clk_delay                                                  ; globalclock                                                                 ; 1        ; 1        ; 0        ; 0        ;
+; clockpll:pll|dac_clk                                                        ; globalclock                                                                 ; 1        ; 1        ; 0        ; 0        ;
+; clockpll:pll|uart_clk                                                       ; globalclock                                                                 ; 1        ; 1        ; 0        ; 0        ;
+; DAC_control:DAC_control_inst|tx_spi_sync                                    ; globalclock                                                                 ; 32       ; 0        ; 0        ; 0        ;
+; globalclock                                                                 ; globalclock                                                                 ; 897      ; 0        ; 0        ; 0        ;
++-----------------------------------------------------------------------------+-----------------------------------------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                                                                                                        ;
++-----------------------------------------------------------------------------+-----------------------------------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                                                  ; To Clock                                                                    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------------------------------------------------------------+-----------------------------------------------------------------------------+----------+----------+----------+----------+
+; clockpll:pll|adc_clk                                                        ; ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start ; 0        ; 0        ; 1        ; 0        ;
+; ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start ; clockpll:pll|adc_clk                                                        ; 0        ; 0        ; 0        ; 1        ;
+; clockpll:pll|adc_clk                                                        ; clockpll:pll|adc_clk                                                        ; 367      ; 0        ; 98       ; 12       ;
+; clockpll:pll|adc_clk_delay                                                  ; clockpll:pll|adc_clk                                                        ; 8        ; 24       ; 0        ; 0        ;
+; clockpll:pll|dac_clk                                                        ; clockpll:pll|adc_clk                                                        ; 24       ; 0        ; 0        ; 0        ;
+; DAC_control:DAC_control_inst|tx_spi_sync                                    ; clockpll:pll|adc_clk                                                        ; 244      ; 0        ; 0        ; 0        ;
+; clockpll:pll|adc_clk                                                        ; clockpll:pll|adc_clk_delay                                                  ; 0        ; 0        ; 0        ; 16       ;
+; clockpll:pll|adc_clk_delay                                                  ; clockpll:pll|adc_clk_delay                                                  ; 115      ; 0        ; 0        ; 70       ;
+; clockpll:pll|adc_clk                                                        ; clockpll:pll|dac_clk                                                        ; 2232     ; 0        ; 0        ; 0        ;
+; clockpll:pll|dac_clk                                                        ; clockpll:pll|dac_clk                                                        ; 1146     ; 328      ; 0        ; 85       ;
+; clockpll:pll|uart_clk                                                       ; clockpll:pll|dac_clk                                                        ; 104      ; 0        ; 2        ; 0        ;
+; DAC_control:DAC_control_inst|tx_spi_sync                                    ; clockpll:pll|dac_clk                                                        ; 790      ; 7        ; 0        ; 0        ;
+; clockpll:pll|dac_clk                                                        ; clockpll:pll|uart_clk                                                       ; 24       ; 0        ; 0        ; 0        ;
+; clockpll:pll|uart_clk                                                       ; clockpll:pll|uart_clk                                                       ; 846      ; 0        ; 0        ; 0        ;
+; clockpll:pll|dac_clk                                                        ; DAC_control:DAC_control_inst|tx_spi_sync                                    ; 267      ; 1629     ; 0        ; 0        ;
+; DAC_control:DAC_control_inst|tx_spi_sync                                    ; DAC_control:DAC_control_inst|tx_spi_sync                                    ; 6912     ; 0        ; 0        ; 0        ;
+; clockpll:pll|adc_clk                                                        ; globalclock                                                                 ; 1        ; 1        ; 0        ; 0        ;
+; clockpll:pll|adc_clk_delay                                                  ; globalclock                                                                 ; 1        ; 1        ; 0        ; 0        ;
+; clockpll:pll|dac_clk                                                        ; globalclock                                                                 ; 1        ; 1        ; 0        ; 0        ;
+; clockpll:pll|uart_clk                                                       ; globalclock                                                                 ; 1        ; 1        ; 0        ; 0        ;
+; DAC_control:DAC_control_inst|tx_spi_sync                                    ; globalclock                                                                 ; 32       ; 0        ; 0        ; 0        ;
+; globalclock                                                                 ; globalclock                                                                 ; 897      ; 0        ; 0        ; 0        ;
++-----------------------------------------------------------------------------+-----------------------------------------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Recovery Transfers                                                                                                                                   ;
++-----------------------------------------------------------------------------+----------------------------+----------+----------+----------+----------+
+; From Clock                                                                  ; To Clock                   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------------------------------------------------------------+----------------------------+----------+----------+----------+----------+
+; ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start ; clockpll:pll|adc_clk       ; 14       ; 14       ; 1        ; 1        ;
+; clockpll:pll|adc_clk                                                        ; clockpll:pll|adc_clk       ; 14       ; 0        ; 1        ; 0        ;
+; ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start ; clockpll:pll|adc_clk_delay ; 9        ; 9        ; 16       ; 16       ;
+; clockpll:pll|adc_clk                                                        ; clockpll:pll|adc_clk_delay ; 9        ; 0        ; 16       ; 0        ;
+; globalclock                                                                 ; clockpll:pll|uart_clk      ; 22       ; 0        ; 0        ; 0        ;
++-----------------------------------------------------------------------------+----------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removal Transfers                                                                                                                                    ;
++-----------------------------------------------------------------------------+----------------------------+----------+----------+----------+----------+
+; From Clock                                                                  ; To Clock                   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------------------------------------------------------------+----------------------------+----------+----------+----------+----------+
+; ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start ; clockpll:pll|adc_clk       ; 14       ; 14       ; 1        ; 1        ;
+; clockpll:pll|adc_clk                                                        ; clockpll:pll|adc_clk       ; 14       ; 0        ; 1        ; 0        ;
+; ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start ; clockpll:pll|adc_clk_delay ; 9        ; 9        ; 16       ; 16       ;
+; clockpll:pll|adc_clk                                                        ; clockpll:pll|adc_clk_delay ; 9        ; 0        ; 16       ; 0        ;
+; globalclock                                                                 ; clockpll:pll|uart_clk      ; 22       ; 0        ; 0        ; 0        ;
++-----------------------------------------------------------------------------+----------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 149   ; 149  ;
+; Unconstrained Output Ports      ; 7     ; 7    ;
+; Unconstrained Output Port Paths ; 16    ; 16   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+    Info: Processing started: Fri Dec 01 20:19:55 2017
+Info: Command: quartus_sta bjt -c bjt
+Info: qsta_default_script.tcl version: #1
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'bjt.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name globalclock globalclock
+    Info (332105): create_clock -period 1.000 -name clockpll:pll|uart_clk clockpll:pll|uart_clk
+    Info (332105): create_clock -period 1.000 -name clockpll:pll|dac_clk clockpll:pll|dac_clk
+    Info (332105): create_clock -period 1.000 -name clockpll:pll|adc_clk clockpll:pll|adc_clk
+    Info (332105): create_clock -period 1.000 -name DAC_control:DAC_control_inst|tx_spi_sync DAC_control:DAC_control_inst|tx_spi_sync
+    Info (332105): create_clock -period 1.000 -name clockpll:pll|adc_clk_delay clockpll:pll|adc_clk_delay
+    Info (332105): create_clock -period 1.000 -name ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1100mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -10.659
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):   -10.659            -922.919 DAC_control:DAC_control_inst|tx_spi_sync 
+    Info (332119):    -9.599            -163.292 clockpll:pll|uart_clk 
+    Info (332119):    -8.997           -1549.520 clockpll:pll|dac_clk 
+    Info (332119):    -7.609            -263.926 clockpll:pll|adc_clk 
+    Info (332119):    -2.640             -54.522 clockpll:pll|adc_clk_delay 
+    Info (332119):    -2.321             -83.117 globalclock 
+    Info (332119):    -1.048              -1.048 ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start 
+Info (332146): Worst-case hold slack is -4.866
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -4.866           -1859.241 clockpll:pll|dac_clk 
+    Info (332119):    -2.067              -8.633 globalclock 
+    Info (332119):    -0.203              -3.389 clockpll:pll|adc_clk 
+    Info (332119):     0.109               0.000 clockpll:pll|adc_clk_delay 
+    Info (332119):     0.111               0.000 ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start 
+    Info (332119):     0.233               0.000 clockpll:pll|uart_clk 
+    Info (332119):     0.543               0.000 DAC_control:DAC_control_inst|tx_spi_sync 
+Info (332146): Worst-case recovery slack is -3.987
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.987             -85.853 clockpll:pll|uart_clk 
+    Info (332119):    -2.326             -50.144 clockpll:pll|adc_clk_delay 
+    Info (332119):    -2.052             -21.832 clockpll:pll|adc_clk 
+Info (332146): Worst-case removal slack is -1.378
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.378             -15.571 clockpll:pll|adc_clk 
+    Info (332119):    -0.894             -21.067 clockpll:pll|adc_clk_delay 
+    Info (332119):     3.057               0.000 clockpll:pll|uart_clk 
+Info (332146): Worst-case minimum pulse width slack is -2.636
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.636           -4442.487 clockpll:pll|dac_clk 
+    Info (332119):    -0.604             -77.895 clockpll:pll|adc_clk 
+    Info (332119):    -0.538             -77.191 DAC_control:DAC_control_inst|tx_spi_sync 
+    Info (332119):    -0.538             -37.548 clockpll:pll|uart_clk 
+    Info (332119):    -0.538             -33.490 globalclock 
+    Info (332119):    -0.538             -21.451 clockpll:pll|adc_clk_delay 
+    Info (332119):    -0.538              -0.791 ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start 
+Info: Analyzing Slow 1100mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -10.562
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):   -10.562            -915.945 DAC_control:DAC_control_inst|tx_spi_sync 
+    Info (332119):    -9.791            -166.158 clockpll:pll|uart_clk 
+    Info (332119):    -9.005           -1498.082 clockpll:pll|dac_clk 
+    Info (332119):    -7.553            -258.332 clockpll:pll|adc_clk 
+    Info (332119):    -2.647             -55.090 clockpll:pll|adc_clk_delay 
+    Info (332119):    -2.515             -84.858 globalclock 
+    Info (332119):    -1.020              -1.020 ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start 
+Info (332146): Worst-case hold slack is -4.897
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -4.897           -1933.059 clockpll:pll|dac_clk 
+    Info (332119):    -1.991              -8.613 globalclock 
+    Info (332119):    -0.161              -2.269 clockpll:pll|adc_clk 
+    Info (332119):     0.058               0.000 ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start 
+    Info (332119):     0.150               0.000 clockpll:pll|adc_clk_delay 
+    Info (332119):     0.199               0.000 clockpll:pll|uart_clk 
+    Info (332119):     0.498               0.000 DAC_control:DAC_control_inst|tx_spi_sync 
+Info (332146): Worst-case recovery slack is -4.148
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -4.148             -89.534 clockpll:pll|uart_clk 
+    Info (332119):    -2.193             -47.385 clockpll:pll|adc_clk_delay 
+    Info (332119):    -1.895             -20.703 clockpll:pll|adc_clk 
+Info (332146): Worst-case removal slack is -1.282
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.282             -14.723 clockpll:pll|adc_clk 
+    Info (332119):    -0.866             -19.988 clockpll:pll|adc_clk_delay 
+    Info (332119):     3.232               0.000 clockpll:pll|uart_clk 
+Info (332146): Worst-case minimum pulse width slack is -2.636
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.636           -4444.347 clockpll:pll|dac_clk 
+    Info (332119):    -0.642             -79.113 clockpll:pll|adc_clk 
+    Info (332119):    -0.538             -77.256 DAC_control:DAC_control_inst|tx_spi_sync 
+    Info (332119):    -0.538             -37.912 clockpll:pll|uart_clk 
+    Info (332119):    -0.538             -37.707 globalclock 
+    Info (332119):    -0.538             -21.948 clockpll:pll|adc_clk_delay 
+    Info (332119):    -0.538              -0.790 ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start 
+Info: Analyzing Fast 1100mV 85C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -5.303
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -5.303            -457.167 DAC_control:DAC_control_inst|tx_spi_sync 
+    Info (332119):    -4.712             -67.467 clockpll:pll|uart_clk 
+    Info (332119):    -4.368            -637.738 clockpll:pll|dac_clk 
+    Info (332119):    -3.509            -107.696 clockpll:pll|adc_clk 
+    Info (332119):    -0.892             -17.109 clockpll:pll|adc_clk_delay 
+    Info (332119):    -0.700             -21.237 globalclock 
+    Info (332119):    -0.594              -0.594 ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start 
+Info (332146): Worst-case hold slack is -2.664
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.664            -955.614 clockpll:pll|dac_clk 
+    Info (332119):    -1.028              -4.297 globalclock 
+    Info (332119):    -0.392              -6.470 clockpll:pll|adc_clk 
+    Info (332119):    -0.101              -0.309 clockpll:pll|adc_clk_delay 
+    Info (332119):    -0.039              -0.039 clockpll:pll|uart_clk 
+    Info (332119):     0.065               0.000 ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start 
+    Info (332119):     0.215               0.000 DAC_control:DAC_control_inst|tx_spi_sync 
+Info (332146): Worst-case recovery slack is -1.514
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.514             -32.478 clockpll:pll|uart_clk 
+    Info (332119):    -1.065             -20.856 clockpll:pll|adc_clk_delay 
+    Info (332119):    -0.885              -7.847 clockpll:pll|adc_clk 
+Info (332146): Worst-case removal slack is -0.927
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.927             -10.494 clockpll:pll|adc_clk 
+    Info (332119):    -0.758             -17.624 clockpll:pll|adc_clk_delay 
+    Info (332119):     1.241               0.000 clockpll:pll|uart_clk 
+Info (332146): Worst-case minimum pulse width slack is -2.174
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.174           -3524.742 clockpll:pll|dac_clk 
+    Info (332119):    -0.485              -4.440 globalclock 
+    Info (332119):    -0.231              -6.061 clockpll:pll|adc_clk 
+    Info (332119):    -0.127              -0.898 clockpll:pll|uart_clk 
+    Info (332119):    -0.034              -0.587 DAC_control:DAC_control_inst|tx_spi_sync 
+    Info (332119):    -0.006              -0.070 clockpll:pll|adc_clk_delay 
+    Info (332119):     0.066               0.000 ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start 
+Info: Analyzing Fast 1100mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -4.973
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -4.973            -429.686 DAC_control:DAC_control_inst|tx_spi_sync 
+    Info (332119):    -4.491             -62.793 clockpll:pll|uart_clk 
+    Info (332119):    -4.135            -532.659 clockpll:pll|dac_clk 
+    Info (332119):    -3.272             -97.022 clockpll:pll|adc_clk 
+    Info (332119):    -0.769             -14.898 clockpll:pll|adc_clk_delay 
+    Info (332119):    -0.646             -17.382 globalclock 
+    Info (332119):    -0.535              -0.535 ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start 
+Info (332146): Worst-case hold slack is -2.570
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.570            -944.148 clockpll:pll|dac_clk 
+    Info (332119):    -1.001              -4.391 globalclock 
+    Info (332119):    -0.395              -6.461 clockpll:pll|adc_clk 
+    Info (332119):    -0.112              -0.348 clockpll:pll|adc_clk_delay 
+    Info (332119):    -0.041              -0.041 clockpll:pll|uart_clk 
+    Info (332119):     0.051               0.000 ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start 
+    Info (332119):     0.190               0.000 DAC_control:DAC_control_inst|tx_spi_sync 
+Info (332146): Worst-case recovery slack is -1.477
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.477             -31.738 clockpll:pll|uart_clk 
+    Info (332119):    -0.950             -18.221 clockpll:pll|adc_clk_delay 
+    Info (332119):    -0.781              -6.469 clockpll:pll|adc_clk 
+Info (332146): Worst-case removal slack is -0.880
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.880             -10.112 clockpll:pll|adc_clk 
+    Info (332119):    -0.724             -16.918 clockpll:pll|adc_clk_delay 
+    Info (332119):     1.233               0.000 clockpll:pll|uart_clk 
+Info (332146): Worst-case minimum pulse width slack is -2.174
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.174           -3529.469 clockpll:pll|dac_clk 
+    Info (332119):    -0.462              -4.563 globalclock 
+    Info (332119):    -0.170              -4.070 clockpll:pll|adc_clk 
+    Info (332119):    -0.087              -0.346 clockpll:pll|uart_clk 
+    Info (332119):    -0.003              -0.033 DAC_control:DAC_control_inst|tx_spi_sync 
+    Info (332119):     0.005               0.000 clockpll:pll|adc_clk_delay 
+    Info (332119):     0.087               0.000 ADC_control:ADC_control_inst|adc_ltc2308:adc_ltc2308_inst|pre_measure_start 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 944 megabytes
+    Info: Processing ended: Fri Dec 01 20:20:04 2017
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:10
+
+

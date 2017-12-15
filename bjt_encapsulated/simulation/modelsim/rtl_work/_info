@@ -1,0 +1,209 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Files\S3E1\exp\bjt_encapsulated\simulation\modelsim
+vADC_control
+IRUWPRPQbB5aQPZ2KnPGG]1
+V6^VSMP;Zke^`lIb<[I;=c0
+Z1 dD:\Files\S3E1\exp\bjt_encapsulated\simulation\modelsim
+w1512130517
+8D:/Files/S3E1/exp/bjt_encapsulated/ADC_control.v
+FD:/Files/S3E1/exp/bjt_encapsulated/ADC_control.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+D:/Files/S3E1/exp/bjt_encapsulated -O0
+n@a@d@c_control
+!i10b 1
+!s100 aS@PMmQjTHjU10cdLVP3Z1
+!s85 0
+!s108 1512131456.845000
+!s107 D:/Files/S3E1/exp/bjt_encapsulated/ADC_control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Files/S3E1/exp/bjt_encapsulated|D:/Files/S3E1/exp/bjt_encapsulated/ADC_control.v|
+!s101 -O0
+vadc_ltc2308
+IX6jl;>N27H^n`Nz>6cI@Z1
+VROKZ6F<KcQ>I<6f6T5o:^1
+R1
+w1511869306
+8D:/Files/S3E1/exp/bjt_encapsulated/adc_ltc2308.v
+FD:/Files/S3E1/exp/bjt_encapsulated/adc_ltc2308.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 8Vc>d=XKmF>KLWUUbDKgM2
+!s85 0
+!s108 1512131457.108000
+!s107 D:/Files/S3E1/exp/bjt_encapsulated/adc_ltc2308.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Files/S3E1/exp/bjt_encapsulated|D:/Files/S3E1/exp/bjt_encapsulated/adc_ltc2308.v|
+!s101 -O0
+vbjt
+IQ7KzTG[3=E1<]N@M=__4M2
+VCBmFzPlEM3^z1:X9Ha]Xc2
+R1
+w1512130596
+8D:/Files/S3E1/exp/bjt_encapsulated/bjt_test.v
+FD:/Files/S3E1/exp/bjt_encapsulated/bjt_test.v
+L0 4
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 omzT1XQeIUFYB7Q_Dbh<Z1
+!s85 0
+!s108 1512131457.046000
+!s107 D:/Files/S3E1/exp/bjt_encapsulated/bjt_test.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Files/S3E1/exp/bjt_encapsulated|D:/Files/S3E1/exp/bjt_encapsulated/bjt_test.v|
+!s101 -O0
+vclockpll
+IInFJM;a1V9_D`V>0[[^IN0
+VnF:bf=lKi7UTlAoiI?LjW1
+R1
+w1512022910
+8D:/Files/S3E1/exp/bjt_encapsulated/clockpll.v
+FD:/Files/S3E1/exp/bjt_encapsulated/clockpll.v
+L0 3
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 zmbE=0>zPz76<WjF>PQQL2
+!s85 0
+!s108 1512131456.977000
+!s107 D:/Files/S3E1/exp/bjt_encapsulated/clockpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Files/S3E1/exp/bjt_encapsulated|D:/Files/S3E1/exp/bjt_encapsulated/clockpll.v|
+!s101 -O0
+vDAC_control
+I6HPNdQWHSOgA:8jcgV]VS0
+VO4R89ZBh^3n:=7cDe^SCS2
+R1
+w1512102440
+8D:/Files/S3E1/exp/bjt_encapsulated/DAC_control.v
+FD:/Files/S3E1/exp/bjt_encapsulated/DAC_control.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@d@a@c_control
+!i10b 1
+!s100 Qcz7Aoi6Z;PG^n9ZjD_1=0
+!s85 0
+!s108 1512131456.761000
+!s107 D:/Files/S3E1/exp/bjt_encapsulated/DAC_control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Files/S3E1/exp/bjt_encapsulated|D:/Files/S3E1/exp/bjt_encapsulated/DAC_control.v|
+!s101 -O0
+vFIFO1
+IT_ccOUMb?5:Z2XmHXk7la2
+V^]LZlXQBa<>l8GbnjgB=i1
+R1
+w1512130397
+8D:/Files/S3E1/exp/bjt_encapsulated/FIFO1.v
+FD:/Files/S3E1/exp/bjt_encapsulated/FIFO1.v
+L0 39
+R2
+r1
+31
+R3
+n@f@i@f@o1
+R4
+!i10b 1
+!s100 RAXSo]H^m7]=aknGKXJ4@2
+!s85 0
+!s108 1512131456.545000
+!s107 D:/Files/S3E1/exp/bjt_encapsulated/FIFO1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Files/S3E1/exp/bjt_encapsulated|D:/Files/S3E1/exp/bjt_encapsulated/FIFO1.v|
+!s101 -O0
+vFIFO_control
+I5:QHOmj0SNaB``652X;^J1
+V7EWdVh_cm[9FABHek>PQ10
+R1
+w1512130664
+8D:/Files/S3E1/exp/bjt_encapsulated/FIFO_control.v
+FD:/Files/S3E1/exp/bjt_encapsulated/FIFO_control.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@f@i@f@o_control
+!i10b 1
+!s100 `bfRlJ6bUekU<BXc>3]AT3
+!s85 0
+!s108 1512131456.692000
+!s107 D:/Files/S3E1/exp/bjt_encapsulated/FIFO_control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Files/S3E1/exp/bjt_encapsulated|D:/Files/S3E1/exp/bjt_encapsulated/FIFO_control.v|
+!s101 -O0
+vtestbench
+!i10b 1
+!s100 6@ENI4Z:^DkVgzEbU6gzX1
+I8GPKDe;U[dM:Pk;GCJTM>3
+VhGfW:390DM[oDMzegDH9`2
+R1
+w1512020800
+8D:/Files/S3E1/exp/bjt_encapsulated/testbench.v
+FD:/Files/S3E1/exp/bjt_encapsulated/testbench.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1512131457.177000
+!s107 D:/Files/S3E1/exp/bjt_encapsulated/testbench.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Files/S3E1/exp/bjt_encapsulated|D:/Files/S3E1/exp/bjt_encapsulated/testbench.v|
+!s101 -O0
+R3
+R4
+vuart_control
+I7W^6__UPLZR7=b<_Tj4=f2
+VjPDKnQzng8ccg;UgMUzb=2
+R1
+w1512130576
+8D:/Files/S3E1/exp/bjt_encapsulated/uart_control.v
+FD:/Files/S3E1/exp/bjt_encapsulated/uart_control.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 `L?TKLDzJozGRT6J12@J>1
+!s85 0
+!s108 1512131456.607000
+!s107 D:/Files/S3E1/exp/bjt_encapsulated/uart_control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Files/S3E1/exp/bjt_encapsulated|D:/Files/S3E1/exp/bjt_encapsulated/uart_control.v|
+!s101 -O0
+vuarttx
+Ii:H@;WkEV:5NlZofK5MVd1
+VAlB@ZaBaY?kalThKQzBFC2
+R1
+w1511759028
+8D:/Files/S3E1/exp/bjt_encapsulated/uarttx.v
+FD:/Files/S3E1/exp/bjt_encapsulated/uarttx.v
+L0 6
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 `0B6bEF3aT;9CS;Ij47KM1
+!s85 0
+!s108 1512131456.925000
+!s107 D:/Files/S3E1/exp/bjt_encapsulated/uarttx.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Files/S3E1/exp/bjt_encapsulated|D:/Files/S3E1/exp/bjt_encapsulated/uarttx.v|
+!s101 -O0

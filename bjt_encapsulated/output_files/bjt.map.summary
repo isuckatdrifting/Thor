@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Fri Dec 01 20:19:04 2017
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : bjt
+Top-level Entity Name : bjt
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 331
+Total pins : 10
+Total virtual pins : 0
+Total block memory bits : 196,608
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI TX Channels : 0
+Total PLLs : 0
+Total DLLs : 0

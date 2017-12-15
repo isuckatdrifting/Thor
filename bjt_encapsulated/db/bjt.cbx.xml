@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="bjt">
+		<CBX_INST_ENTRY INSTANCE_NAME="|bjt|FIFO_control:FIFO_control_inst|FIFO1:FIFO1_inst|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_uo81.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
